@@ -9,9 +9,10 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useEffect} from 'react';
 import {StyleSheet} from 'react-native';
-import HomeScreen from './components/pages/Home/Home';
-import SelectedAnimeScreen from './components/pages/SelectedAnime/SelectedAnime';
 import SplashScreen from 'react-native-splash-screen';
+import Home from './Home';
+import Login from './Login';
+import Userprofile from './Userprofile';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,9 +22,10 @@ const App = () => {
   }, []);
 
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="SelectedAnime" component={SelectedAnimeScreen} />
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Userprofile" component={Userprofile} />
     </Stack.Navigator>
   );
 };
