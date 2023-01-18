@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import Background from './Background';
 import Btn from './Btn';
 import {green} from './Constants';
+import normalize from 'react-native-normalize';
 
 const Home = props => {
   // const testAlert = () => {
@@ -11,8 +12,19 @@ const Home = props => {
   return (
     <Background>
       <View style={{marginHorizontal: 40, marginVertical: 100}}>
-        <Text style={{color: 'white', fontSize: 64}}>Demo</Text>
-        <Text style={{color: 'white', fontSize: 64, marginBottom: 40}}>
+        <Text
+          style={{
+            color: 'white',
+            fontSize: normalize(64),
+          }}>
+          Demo
+        </Text>
+        <Text
+          style={{
+            color: 'white',
+            fontSize: normalize(60),
+            marginBottom: normalize(40),
+          }}>
           Application
         </Text>
         <Btn

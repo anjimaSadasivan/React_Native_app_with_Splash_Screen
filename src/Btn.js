@@ -1,5 +1,6 @@
 import {Text, TouchableOpacity} from 'react-native';
 import React from 'react';
+import normalize from 'react-native-normalize';
 
 //function for custom button
 
@@ -9,11 +10,11 @@ const Btn = ({bgColor, btnLabel, textColor, Press}) => {
       onPress={Press}
       style={{
         backgroundColor: bgColor,
-        borderRadius: 100,
+        borderRadius: normalize(100),
         alignItems: 'center',
-        width: 350,
-        paddingVertical: 5,
-        marginVertical: 10,
+        width: normalize(300),
+        paddingVertical: normalize(5),
+        marginVertical: normalize(10),
       }}>
       <Text style={{color: textColor, fontSize: 25, fontWeight: 'bold'}}>
         {btnLabel}
