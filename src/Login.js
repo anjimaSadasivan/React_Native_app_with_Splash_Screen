@@ -19,7 +19,7 @@ const Login = props => {
   //function to check for a valid user
   const handleLogin = () => {
     if (email === 'abc' && password === '123') {
-      props.navigation.navigate('Userprofile');
+      props.navigation.navigate('MenuList');
     } else {
       // alert('Invalid email or password');
       Alert.alert(

@@ -13,6 +13,7 @@ import SplashScreen from 'react-native-splash-screen';
 import Home from './Home';
 import Login from './Login';
 import Userprofile from './Userprofile';
+import MenuList from './MenuList';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ const App = () => {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Userprofile" component={Userprofile} />
+      <Stack.Screen name="MenuList" component={MenuList} />
     </Stack.Navigator>
   );
 };
