@@ -9,6 +9,7 @@ import {
   StatusBar,
 } from 'react-native';
 import Store from './Store';
+import {fetchData} from './actions/actions';
 
 const GENERES = [
   {
@@ -49,6 +50,10 @@ const MenuList = () => {
       if (genreTitle === 'Sci-fi') {
         dispatch({type: 'SHOW_SCIFI_BOOKS'});
       }
+      if (genreTitle === 'Sci-fi') {
+        dispatch({type: 'SHOW_SCIFI_BOOKS'});
+        dispatch(fetchData());
+      }
     }
   };
 
@@ -79,7 +84,7 @@ const MenuList = () => {
           </Text>
         </View>
       )}
-      {selectedGenre === 'Sci-fi' && (
+      {/* {selectedGenre === 'Sci-fi' && (
         <View>
           <Text style={{fontSize: 20, color: 'blue', fontWeight: 'bold'}}>
             Book SF 1
@@ -91,11 +96,15 @@ const MenuList = () => {
             Book SF 3
           </Text>
         </View>
-      )}
-      {selectedGenre === 'Horror' && (
+      )} */}
+      {selectedGenre === 'Sci-fi' && (
         <FlatList
-          data={horrorBooks}
-          renderItem={({item}) => <Text>{item.title}</Text>}
+          data={data}
+          renderItem={({item}) => (
+            <Text style={{fontSize: 40, color: 'Black', fontWeight: 'bold'}}>
+              {item.name}
+            </Text>
+          )}
           keyExtractor={item => item.id}
         />
       )}

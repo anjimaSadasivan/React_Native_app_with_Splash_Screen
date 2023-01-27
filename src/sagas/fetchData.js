@@ -10,7 +10,7 @@ function* fetchDataSaga() {
   try {
     const response = yield call(
       axios.get,
-      'https://mocki.io/v1/1241c9c8-6acc-4a93-9f42-3d6c67961286',
+      'https://mocki.io/v1/a64ba5b6-c2a1-46af-bf0f-f43eb9060eb9',
     );
     yield put({type: FETCH_DATA_SUCCESS, payload: response.data});
   } catch (error) {
