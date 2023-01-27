@@ -71,6 +71,7 @@ const MenuList = () => {
         renderItem={({item}) => <Display title={item.title} />}
         keyExtractor={item => item.id}
       />
+
       {selectedGenre === 'AutoBiography' && (
         <View>
           <Text style={{fontSize: 20, color: 'red', fontWeight: 'bold'}}>
